@@ -1,0 +1,27 @@
+{
+  "name": "mooc-hello-css3",
+  "version": "1.0.0",
+  "description": "重拾CSS3",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MirrorXu/mooc-hello-css3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MirrorXu/mooc-hello-css3/issues"
+  },
+  "homepage": "https://github.com/MirrorXu/mooc-hello-css3#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "vue": "^2.5.2"
+  }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>text-overflow</title>
+    <style>
+        *{
+            box-sizing: content-box;
+        }
+        div{
+            width: 400px;
+            height: 100px;
+            margin: 0  auto;
+            color: #fff;
+            font-size: 36px;
+            background-color: red;
+        }
+
+        #box1{
+            overflow: scroll;
+        }
+
+        #box2{
+            overflow: hidden;
+        }
+        #box3{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        #box4{
+            height: auto;
+            font-size: 30px;
+        }
+        #box5{
+            height: auto;
+            font-size: 20px;
+            word-wrap: break-word;  /* 好像没有作用啊  */
+            word-break: break-all;
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="box1">
+你是我的小苹果，怎么爱你都不嫌多。
+你是我的小苹果，怎么爱你都不嫌多。
+你是我的小苹果，怎么爱你都不嫌多。
+</div>
+<br>
+<br>
+<br>
+<div id="box2">
+    你是我的小苹果，怎么爱你都不嫌多。
+    你是我的小苹果，怎么爱你都不嫌多。
+    你是我的小苹果，怎么爱你都不嫌多。
+</div>
+<br>
+<br>
+<br>
+<div id="box3">
+    你是我的小苹果，怎么爱你都不嫌多。
+    你是我的小苹果，怎么爱你都不嫌多。
+    你是我的小苹果，怎么爱你都不嫌多。
+</div>
+
+<br>
+<br>
+<br>
+<div id="box4">
+    The concept is simple: when you raise your heart-rate and burn calories for a few minutes at a time, your metabolism spikes and builds muscle more quickly. It even keeps working during rest periods and for up to 24 hours later. This method is brutal for beginners but highly effective.
+</div>
+<br>
+<br>
+<div id="box5">
+    The concept is simple: when you raise your heart-rate and burn calories for a few minutes at a time, your metabolism spikes and builds muscle more quickly. It even keeps working during rest periods and for up to 24 hours later. This method is brutal for beginners but highly effective.
+</div>
+</body>
+</html>

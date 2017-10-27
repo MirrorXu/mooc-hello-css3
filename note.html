@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>CSS3 note</title>
+
+    <!-- Bootstrap -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+
+
+    </style>
+</head>
+<body>
+
+
+<div id="header">
+</div>
+<div id="left">
+    <h1 style="color: white ;text-align: center">CSS3</h1>
+     <ul id="navbar">
+         <template v-for="v in heading ">
+             <li  @click="addBgColor( v.tag )" :class="v.tag" ><a :href="'#'+v.heading" >{{v.index}} . {{ v.heading }} </a></li>
+         </template>
+     </ul>
+</div>
+<div id="right">
+    <h2>CSS3背景 background-origin </h2>
+    <p>设置元素的起始位置 。 需要注意的是，如果背景不是no-repeat，这个属性无效，它会从边框开始显示。</p>
+    <pre>
+                background-origin: [ border-box |  padding-box | content-box  ]
+            </pre>
+    <p class="demo-tag">demo：</p>
+    <div class="demo-box">
+        <div class="demo-item">
+            <div style="width: 200px;height: 200px; border: 50px solid salmon ; padding: 50px; background:url('https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=4fb10696d3f9d72a0369184fb5434351/fc1f4134970a304e70e2c253dbc8a786c8175c52.jpg') no-repeat; background-origin: content-box;"></div>
+            <span>background-origin: content-box</span>
+        </div>
+        <div class="demo-item">
+            <div style="width: 200px;height: 200px; border: 50px  ; padding: 50px; background:url('https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=4fb10696d3f9d72a0369184fb5434351/fc1f4134970a304e70e2c253dbc8a786c8175c52.jpg') no-repeat; background-origin: border-box;">
+            </div>
+            <span> background-origin: border-box </span>
+        </div>
+        <div class="demo-item">
+            <div style="width: 200px;height: 200px; border: 50px solid salmon ; padding: 50px; background:url('https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike92%2C5%2C5%2C92%2C30/sign=4fb10696d3f9d72a0369184fb5434351/fc1f4134970a304e70e2c253dbc8a786c8175c52.jpg') no-repeat; background-origin: padding-box;"></div>
+            <span>background-origin: padding-box</span>
+        </div>
+    </div>
+
+    <h2>CSS3背景 background-clip</h2>
+    <p>用来将背景图片做适当的裁剪以适应实际需要。</p>
+    <pre>
+        background-clip ： [ border-box | padding-box | content-box | no-clip ]
+    </pre>
+    <p class="demo-tag">demo：</p>
+    <div class="demo-box">
+        <div class="demo-item">
+            <span style="display: inline-block; width: 300px; height: 300px; background: url('http://i1.umei.cc/uploads/tu/201710/9999/b3a05191c4.jpg') no-repeat; background-origin:border-box; padding: 50px ; border: 50px solid salmon; background-clip: content-box; "> content-box</span>
+            background-origin:border-box; padding: 50px ; border: 50px solid salmon; background-clip: content-box;
+        </div>
+    </div>
+
+
+    <h2>CSS3背景 background-size</h2>
+    <p>设置背景图片的大小，以 长度值 或 百分比 显示，还可以通过 cover 和 contain 来对图片进行伸缩。</p>
+    <pre>
+        background-size: [ auto | 长度值 | 百分比 | cover | contain ]
+    </pre>
+    <p class="demo-tag">demo：</p>
+    <div class="demo-box">
+        <div class="demo-item">
+            <span style="display: inline-block; width: 300px; height: 300px; background: url('http://i1.umei.cc/uploads/tu/201710/9999/b3a05191c4.jpg') no-repeat; background-origin:padding-box; padding: 50px ; border: 50px solid salmon; background-size: cover "> content-box</span>
+            background-origin:padding-box;
+            background-size: cover
+        </div>
+        <div class="demo-item">
+        <span style="display: inline-block; width: 300px; height: 300px; background: url('http://i1.umei.cc/uploads/tu/201710/9999/b3a05191c4.jpg') no-repeat; background-origin:padding-box; padding: 50px ; border: 50px solid salmon; background-size: 50%"> content-box</span>
+        background-origin:padding-box;
+        background-size: 50%
+        </div>
+        <div class="demo-item">
+            <span style="display: inline-block; width: 300px; height: 300px; background: url('http://i1.umei.cc/uploads/tu/201710/9999/b3a05191c4.jpg') no-repeat; background-origin:padding-box; padding: 50px ; border: 50px solid salmon; background-size: auto"> content-box</span>
+            background-origin:padding-box;
+            background-size: auto
+        </div>
+    </div>
+
+
+    <h2>CSS3背景 multiple backgrounds</h2>
+    <p class="demo-tag">Demo:</p>
+    <div class="demo-box">
+        <div class="demo-item">
+            <span style="display: inline-block;
+            width: 600px;
+    height: 240px;
+    border: 1px solid #999;
+
+    background-image: url(http://img.mukewang.com/54cf2365000140e600740095.jpg),
+                      url(http://img.mukewang.com/54cf238a0001728d00740095.jpg),
+                      url(http://img.mukewang.com/54cf23b60001fd9700740096.jpg);
+    background-position: left top,100px 50px,200px 100px;
+    background-size: 50px 100px ;
+    background-repeat: no-repeat, no-repeat, no-repeat;"></span>
+
+        <pre>
+            background-image: url(http://img.mukewang.com/54cf2365000140e600740095.jpg),
+                      url(http://img.mukewang.com/54cf238a0001728d00740095.jpg),
+                      url(http://img.mukewang.com/54cf23b60001fd9700740096.jpg);
+            background-position: left top,100px 50px,200px 100px;
+            background-size: 50px 100px ;
+            background-repeat: no-repeat, no-repeat, no-repeat;
+        </pre>
+        </div>
+    </div>
+    
+    <h2>CSS3背景 制作导航菜单综合练习题</h2>
+    <p>
+        <img src="http://img.mukewang.com/5395742900016eb405500111.jpg" alt="">
+    </p>
+    <pre>
+        .nav {
+            width: 560px;
+            height: 50px;
+            font: bold 0/50px Arial;
+            text-align: center;
+            margin: 40px auto 0;
+            background: #f65f57;
+            /*制作圆*/
+            border-radius: 10px;
+
+            /*制作导航立体风格*/
+            box-shadow: 0 5px 2px #e64f47;
+
+        }
+
+        .nav a {
+            display: inline-block;
+            -webkit-transition: all 0.2s ease-in;
+            -moz-transition: all 0.2s ease-in;
+            -o-transition: all 0.2s ease-in;
+            -ms-transition: all 0.2s ease-in;
+            transition: all 0.2s ease-in;
+        }
+
+        .nav a:hover {
+            -webkit-transform: rotate(10deg);
+            -moz-transform: rotate(10deg);
+            -o-transform: rotate(10deg);
+            -ms-transform: rotate(10deg);
+            transform: rotate(10deg);
+        }
+
+        .nav li {
+            position: relative;
+            display: inline-block;
+            padding: 0 16px;
+            font-size: 13px;
+            text-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+            list-style: none outside none;
+        }
+
+        /*使用伪元素制作导航列表项分隔线*/
+        .nav li {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+            background-size: 1px 20px;
+            background-repeat: no-repeat;
+            background-position: right center;
+
+        }
+
+        .nav li:last-child {
+            background: none;
+        }
+
+        /*删除第一项和最后一项导航分隔线*/
+
+        .nav a,
+        .nav a:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    </pre>
+
+
+
+
+</div>
+<div id="footer"></div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<script src="node_modules/vue/dist/vue.js"></script>
+<script>
+    $(function () {
+        function Mirror_setSinglePage(obj) {
+            if(!obj ){
+                var obj = {
+                    header:{
+                        el:'#header',
+                        height:0
+                    },
+                    left:{
+                        el:'#left',
+                        width:400
+                    },
+                    content:{
+                        el:'#right'
+                     },
+                    footer:{
+                        el:'#footer',
+                        height:0
+                    }
+                }
+            }
+            var win = $('body');
+            var w = win.width();
+            var h = win.height();
+
+            var leftTop = obj.header.height;
+            var leftHeight =(h-obj.header.height-obj.footer.height );
+            var contentWidth = w - obj.left.width;
+
+            $( obj.header.el ).css({'position':'absolute','width':w,'height':obj.header.height , 'left':0 , 'top':0});
+            $(obj.footer.el).css({'position':'absolute','width':w,'height':obj.header.height , 'left':0 , 'bottom':0});
+            $(obj.left.el).css({'position':'absolute','width':obj.left.width,'height':leftHeight , 'left':0 , 'top':leftTop,'overflow-y':'auto'});
+            $(obj.content.el).css({'position':'absolute','width':contentWidth,'height':leftHeight , 'right':0 , 'top':leftTop ,'overflow-y':'scroll'});
+
+
+        }
+        Mirror_setSinglePage();
+        $(window).on( 'resize' , function () {
+            Mirror_setSinglePage();
+        })
+
+
+
+
+
+
+
+
+        var headingArr = [];
+        $.each( $('#right > h2') , function (i ,v  ) {
+            var id = $( v ).html().toString().replace(/\s/g , '');
+            var index = i+1 ;
+            var temp = '<span class="index">'+ index.toString() +'. </span>';
+
+            $(v).prepend( temp );
+            $(v).attr( 'id' , id );
+
+            headingArr.push( {
+                index:index,
+                heading:id,
+                tag:'li'+ Math.floor(Math.random()*1000).toString()+Math.floor(Math.random()*1000).toString()
+            })
+        })
+
+
+        var app = new Vue({
+            el:'#navbar',
+            data:{
+                heading:headingArr
+            },
+            methods:{
+                addBgColor:function ( tag ) {
+                    $('.'+tag).find('a').addClass('navbar-item-bg');
+                    $('.'+tag).siblings().find('a').removeClass('navbar-item-bg');
+                }
+            }
+        })
+
+    })
+</script>
+</body>
+</html>

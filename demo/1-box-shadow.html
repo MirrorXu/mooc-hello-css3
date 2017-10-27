@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>box-shadow </title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            margin: 0  auto;
+        }
+        #box1{
+            background-color: red;
+            box-shadow: 10px 10px 2px 1px rgba(0,0,0,0.3);
+        }
+
+        #box2{
+            /*background-color: red;*/
+            box-shadow: 2px 0 2px 5px rgba(0,0,0,0.3) inset;
+        }
+        #box3{
+            box-shadow:4px 16px 3px 5px #f00, -14px -5px 3px #000, 0px 0px 12px 5px #33CC00 inset;
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+
+<div id="box1"> 外阴影 </div>
+<br>
+<br>
+<br>
+<div id="box2"> 内阴影 </div>
+<br>
+<br>
+<br>
+<div id="box3"> 多重阴影 </div>
+</body>
+</html>
