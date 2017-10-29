@@ -32,6 +32,9 @@ body {
   font-size: 16px;
   text-align: left;
   text-decoration: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 #left #navbar > li:hover > a {
   background-color: #f0fff0;
@@ -61,6 +64,10 @@ body {
   font-family: '宋体';
   text-indent: 2em;
 }
+#right > img {
+  display: inline-block;
+  max-width: 80%;
+}
 #right > .demo-tag {
   font-size: 25px;
   font-weight: bold;
@@ -86,4 +93,7 @@ body {
 }
 .navbar-item-bg {
   background-color: #f0fff0;
+}
+:target {
+  text-shadow: 10px 10px 15px #666;
 }

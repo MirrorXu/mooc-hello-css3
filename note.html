@@ -36,6 +36,25 @@
      </ul>
 </div>
 <div id="right">
+    <h2>CSS3文字与字体 text-overflow 与 word-wrap</h2>
+    <p>text-overflow用来设置是否使用一个省略标记（...）标示对象内文本的溢出。</p>
+    <img src="imgs/text-overflow.jpg" alt="imgs/text-overflow.jpg"/>
+    <p>text-overflow只是用来说明文字溢出时用什么方式显示，要实现溢出时产生省略号的效果，还须定义强制文本在一行内显示（white-space:nowrap）及溢出内容为隐藏（overflow:hidden），只有这样才能实现溢出文本显示省略号的效果，代码如下：
+    </p>
+    <pre>
+        /* 设置文本单行显示，超出部分显示为‘...’ */
+        .oneLine-textOverflow{
+            text-overflow:ellipsis;
+            overflow:hidden;
+            white-space:nowrap;
+        }
+    </pre>
+    <p>
+        同时，word-wrap也可以用来设置文本行为，当前行超过指定容器的边界时是否断开转行。
+    </p>
+    <div class="demo-tag">Demo: <a href="demo/4-text-overflow.html">demo/4-text-overflow.html</a> </div>
+
+
     <h2>CSS3背景 background-origin </h2>
     <p>设置元素的起始位置 。 需要注意的是，如果背景不是no-repeat，这个属性无效，它会从边框开始显示。</p>
     <pre>
@@ -193,6 +212,97 @@
     </pre>
 
 
+    <h2>CSS3选择器 属性选择器</h2>
+    <p> 在CSS2中引入了一些属性选择器，而CSS3在CSS2的基础上对属性选择器进行了扩展，新增了3个属性选择器，使得属性选择器有了通配符的概念，这三个属性选择器与CSS2的属性选择器共同构成了CSS功能强大的属性选择器。如下表所示：
+    </p>
+    <img src="imgs/classSlector.jpg" alt="属性选择器说明"/>
+    <div class="demo-tag">demo:</div>
+    <div class="demo-box">
+        <pre>
+            /* 属性选择器 */
+            a[class^='column']{
+                background:red;
+            }
+            a[href$='.doc']{
+                background:green;
+            }
+            a[title*='o']{
+                background:blue;
+            }
+
+        </pre>
+    </div>
+
+    <h2>CSS3 结构性伪类选择器—root</h2>
+    <p>:root选择器，从字面上我们就可以很清楚的理解是根选择器，他的意思就是匹配元素E所在文档的根元素。在HTML文档中，根元素始终是html</p>
+    <pre>
+        :root{
+            background:red; /* html文档的背景色将变为红色 */
+        }
+    </pre>
+
+    <h2>CSS3 结构性伪类选择器—not</h2>
+    <p>:not选择器称为否定选择器，和jQuery中的:not选择器一模一样，可以选择除某个元素之外的所有元素。就拿form元素来说，比如说你想给表单中除submit按钮之外的input元素添加红色边框，CSS代码可以写成：</p>
+    <pre>
+        form {
+            width: 200px;
+            margin: 20px auto;
+        }
+        div {
+            margin-bottom: 20px;
+        }
+        input:not([type="submit"]){
+            border:1px solid red;
+        }
+    </pre>
+
+    <h2>CSS3 结构性伪类选择器—empty</h2>
+    <p>:empty选择器表示的就是空。用来选择没有任何内容的元素，这里没有内容指的是一点内容都没有，哪怕是一个空格。</p>
+
+    <pre>
+        html样式
+
+        < p >我是一个段落 < /p >
+        < p > < /p>
+        < p >< /p>
+        ​
+        css：
+        
+        p{
+            background: orange;
+            min-height: 30px;
+        }
+        p:empty {
+            display: none;
+        }​
+
+        结果：
+        <img src="imgs/emptySelector.jpg" alt=""/>
+        
+    </pre>
+
+
+    <h2>CSS3 结构性伪类选择器—target</h2>
+    <p>:target选择器称为目标选择器，用来匹配文档(页面)的url的某个标志符的目标元素。我们先来上个例子，然后再做分析。
+    </p>
+    <div class="demo-tag">demo :</div>
+    <a href="demo/targetSelsetor.html">demo/targetSelsetor.html</a>
+
+    <h2>CSS3 结构性伪类选择器 first-child / last-child</h2>
+    <p>“:first-child”选择器表示的是选择父元素的第一个子元素的元素E。简单点理解就是选择元素中的第一个子元素，记住是子元素，而不是后代元素。
+    </p>
+    <p>“:last-child”选择器与“:first-child”选择器作用类似，不同的是“:last-child”选择器选择的是元素的最后一个子元素。
+    </p>
+    <div class="demo-tag">demo :</div>
+    <a href="demo/first-child.html">demo/first-child.html</a>
+
+    <h2>CSS3 结构性伪类选择器—nth-child(n)</h2>
+    <p>“:nth-child(n)”选择器用来定位某个父元素的一个或多个特定的子元素。其中“n”是其参数，而且可以是整数值(1,2,3,4)，也可以是表达式(2n+1、-n+5)和关键词(odd、even)，但参数n的起始值始终是1，而不是0。也就是说，参数n的值为0时，选择器将选择不到任何匹配的元素。
+    </p>
+    <p><strong>经验与技巧:</strong>当“:nth-child(n)”选择器中的n为一个表达式时，其中n是从0开始计算，当表达式的值为0或小于0的时候，不选择任何匹配的元素。如下表所示：
+    </p>
+    <img src="imgs/nth-child.jpg" alt=""/>
+    <div class='demo-tag'>demo: <a href="demo/nth-child.html" target="_blank">demo/nth-child.html</a></div>
 
 
 </div>
@@ -214,7 +324,7 @@
                     },
                     left:{
                         el:'#left',
-                        width:400
+                        width:500
                     },
                     content:{
                         el:'#right'

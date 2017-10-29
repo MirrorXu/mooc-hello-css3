@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>first-child</title>
+    <style>
+
+        .box{
+            margin-top: 50px;
+            background-color: skyblue;
+        }
+
+        /*demo1:*/
+        ul > li:first-child{
+            background-color: red;
+        }
+
+
+        /*deme2:*/
+
+        div p{
+            border-bottom: 2px solid blue;
+        }
+        div > p{
+            border-left: 5px solid seagreen;
+            padding-left: 10px;
+        }
+        div p:first-child{
+            color: red;
+        }
+        div > p:first-child{
+            background-color: palevioletred;
+        }
+        div > p:first-child span:first-child{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<h1>demo1:</h1>
+<div class="box">
+   <ul>
+       <li>1</li>
+       <li>2</li>
+       <li>3</li>
+       <li>4</li>
+   </ul>
+</div>
+<div class="box">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</div>
+
+<h1>demo2:</h1>
+<div class="box">
+    <p>如果这里有一个p呢 <span>span 1</span> <span>span 2</span></p>
+    <h2>二级 标题 <p>二级标题中的段落标签</p></h2>
+    <p>段落1</p>
+    <p>段落2</p>
+    <p>段落3</p>
+    <p>段落4</p>
+</div>
+
+
+</body>
+</html>

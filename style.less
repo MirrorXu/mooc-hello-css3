@@ -29,6 +29,9 @@ html , body{
         font-size: 16px;
         text-align: left;
         text-decoration: none;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
       }
     }
     >li:hover >a{
@@ -62,6 +65,10 @@ html , body{
     font-family: '宋体';
     text-indent: 2em;
   }
+  >img{
+    display: inline-block;
+    max-width: 80%;
+  }
   >.demo-tag{
     font-size: 25px;
     font-weight: bold;
@@ -91,4 +98,8 @@ html , body{
 
 .navbar-item-bg{
   background-color: rgb(240,255,240);
+}
+
+:target{
+  text-shadow: 10px 10px 15px #666;
 }

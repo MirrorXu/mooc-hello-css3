@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            color: azure;
+        }
+        :root{
+            background-color: rgb(240, 255, 250);
+        }
+        ul{
+            list-style: none;
+            background-image: linear-gradient(to top , #000066 , #001077 );
+            /*display: inline-block;*/
+            text-align: center;
+        }
+        li{
+            /*float: left;*/
+            display: inline-block;
+            background-image: linear-gradient( to bottom , rgba(255,255,255,0.1) , #ddd ,rgba(255,255,255,0.1) );
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-size: 1px 20px;
+            padding: 10px 15px;
+            text-align: center;
+            border-bottom:2px solid #000066 ;
+
+        }
+        li:hover{
+            border-bottom: 2px solid rgb( 150 , 60 ,100);
+        }
+        li:last-child{
+            background: none;
+        }
+
+        li > a{
+            display: inline-block;
+            color: azure;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        #content{
+            background-color: seagreen;
+            color: red;
+            font-size: 50px;
+        }
+
+        #content > div{
+            padding: 50px;
+            /*display: none;*/
+        }
+
+        :target{
+            background-color:yellowgreen;
+        }
+        :target > h1{
+             color: red;
+         }
+
+    </style>
+</head>
+<body>
+<ul>
+    <li><a href="#box1">连接1</a></li>
+    <li><a href="#box2">连接2</a></li>
+    <li><a href="#box3">连接3</a></li>
+</ul>
+
+<div id="content">
+    <div id="box1">
+        <h1>标题1</h1>
+        连接1 的内容
+    </div>
+    <div id="box2">
+
+        <h1>标题1</h1>
+        连接2 的内容
+    </div>
+    <div id="box3">
+        <h1>标题1</h1>
+        连接3 的内容
+    </div>
+</div>
+
+</body>
+</html>
