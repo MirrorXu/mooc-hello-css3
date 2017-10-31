@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>read-only</title>
+    <style>
+        body >*:not(:first-child){
+            margin-top: 20px;
+        }
+        div, p{
+            border: 1px solid slateblue ;
+        }
+        p:read-only{
+            color: #3c8c46;
+        }
+        div:read-only{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<h1>有问题！！！</h1>
+
+
+<div readonly="read-only">
+    read-only 的 div标签的颜色
+</div>
+<p readonly="read-only">
+这是一个readonly 的 段落标签
+</p>
+</body>
+</html>

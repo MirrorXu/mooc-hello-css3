@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>skew</title>
+    <style>
+        div{
+            width: 400px;
+            height: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        div:nth-child(1){
+            background-color: orangered;
+            margin-top: 50px;
+            transform: skew(-45deg );
+        }
+
+
+        div:nth-child(2){
+              background-color: orangered;
+              margin-top: 250px;
+              transform: skew(0 , 45deg );
+          }
+    </style>
+</head>
+<body>
+
+<div>
+    skew（-45deg）
+</div>
+
+<div>
+    skew(-45deg , -30deg)
+</div>
+
+</body>
+</html>

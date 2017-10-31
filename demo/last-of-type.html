@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>last-of-type</title>
+    <style>
+        .wrapper > p:last-of-type{
+            background-color: red;
+        }
+        .wrapper > p:last-of-type(2){
+            background-color: deepskyblue;
+        }
+        .wrapper > p:first-of-type{
+            background-color: orchid;
+        }
+        .wrapper > div:last-of-type{
+              background-color: greenyellow;
+        }
+        .wrapper > div:first-of-type{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <p>我是第一个段落</p>
+    <p>我是第二个段落</p>
+    <p>我是第三个段落</p>
+    <p>我是第三个段落</p>
+    <p>我是第三个段落</p>
+    <div>我是第一个Div元素</div>
+    <div>我是第二个Div元素</div>
+    <div>我是第三个Div元素</div>
+    <div>我是第三个Div元素</div>
+    <div>我是第三个Div元素</div>
+</div>
+</body>
+</html>
