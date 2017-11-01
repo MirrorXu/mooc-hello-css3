@@ -408,6 +408,85 @@
 
 
 
+    <h2>CSS3中的变形--缩放 scale()</h2>
+    <p>
+        缩放 scale()函数 让元素根据中心原点对对象进行缩放。
+
+        缩放 scale 具有三种情况：
+    </p>
+    <p>1、 scale(X,Y)使元素水平方向和垂直方向同时缩放（也就是X轴和Y轴同时缩放）。注意：Y是一个可选参数，如果没有设置Y值，则表示X，Y两个方向的缩放倍数是一样的。</p>
+    <img src="imgs/scale1.jpg" alt="">
+    <p>2、scaleX(x)元素仅水平方向缩放（X轴缩放）</p>
+    <img src="imgs/scale2.jpg" alt="">
+    <p>3、scaleY(y)元素仅垂直方向缩放（Y轴缩放）</p>
+    <img src="imgs/scale3.jpg" alt="">
+
+    <div class="demo-tag">demo: <a href="demo/scale.html">demo/scale.html</a></div>
+
+
+    <h2>CSS3中的变形--位移 translate()</h2>
+    <p>
+        translate()函数可以将元素向指定的方向移动，类似于position中的relative。或以简单的理解为，使用translate()函数，可以把元素从原来的位置移动，而不影响在X、Y轴上的任何Web组件。
+    </p>
+    <p>
+        translate我们分为三种情况：
+    </p>
+    <p>1、translate(x,y)水平方向和垂直方向同时移动（也就是X轴和Y轴同时移动）</p>
+    <img src="imgs/translate1.jpg" alt="">
+    <p>2、translateX(x)仅水平方向移动（X轴移动）</p>
+    <img src="imgs/translate2.jpg" alt="">
+    <p>3、translateY(Y)仅垂直方向移动（Y轴移动）</p>
+    <img src="imgs/translate3.jpg" alt="">
+    <div class="demo-tag">demo: <a href="demo/translate.html">demo/translate.html</a></div>
+
+
+    <h2>CSS3中的变形--原点 transform-origin</h2>
+    <p>
+        任何一个元素都有一个中心点，默认情况之下，其中心点是居于元素X轴和Y轴的50%处。如下图所示：
+    </p>
+    <img src="imgs/transform-origin.jpg" alt="">
+    <p>
+        在没有重置transform-origin改变元素原点位置的情况下，CSS变形进行的旋转、位移、缩放，扭曲等操作都是以元素自己中心位置进行变形。但很多时候，我们可以通过transform-origin来对元素进行原点位置改变，使元素原点不在元素的中心位置，以达到需要的原点位置。
+    </p>
+
+    <p>
+        transform-origin取值和元素设置背景中的background-position取值类似，如下表所示：
+    </p>
+    <img src="imgs/transform-origin-1.jpg" alt="">
+    
+    <div class="demo-tag">demo: <a href="demo/transform-origin.html"> demo/transform-origin.html</a></div>
+
+
+
+    <h2>CSS3中的动画--过渡属性 transition-property</h2>
+    <p>
+        早期在Web中要实现动画效果，都是依赖于JavaScript或Flash来完成。但在CSS3中新增加了一个新的模块transition，它可以通过一些简单的CSS事件来触发元素的外观变化，让效果显得更加细腻。简单点说，就是通过鼠标的单击、获得焦点，被点击或对元素任何改变中触发，并平滑地以动画效果改变CSS的属性值。
+    </p>
+    <pre>
+        在CSS中创建简单的过渡效果可以从以下几个步骤来实现：
+            第一，在默认样式中声明元素的初始状态样式；
+            第二，声明过渡元素最终状态样式，比如悬浮状态；
+            第三，在默认样式中通过添加过渡函数，添加一些不同的样式。
+    </pre>
+    <p>CSS3的过度transition属性是一个复合属性，主要包括以下几个子属性：</p>
+    <pre>
+        transition-property:指定过渡或动态模拟的CSS属性
+        transition-duration:指定完成过渡所需的时间
+        transition-timing-function:指定过渡函数
+        transition-delay:指定开始出现的延迟时间
+    </pre>
+    <p>transition-property用来指定过渡动画的CSS属性名称，而这个过渡属性只有具备一个中点值的属性（需要产生动画的属性）才能具备过渡效果，其对应具有过渡的CSS属性主要有：</p>
+    <img src="imgs/transition-property.jpg" alt="">
+    <demo class="demo-tag"> demo: <a href="demo/transition-property.html">demo/transition-property.html</a></demo>
+
+
+
+
+
+
+
+
+
 
 
 

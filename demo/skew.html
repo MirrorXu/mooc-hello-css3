@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>skew</title>
     <style>
+        body{
+            background-color: #000000;
+        }
         div{
             width: 400px;
             height: 200px;
@@ -13,26 +16,49 @@
         div:nth-child(1){
             background-color: orangered;
             margin-top: 50px;
-            transform: skew(-45deg );
+            transition-duration: 3s;
+        }
+        div:nth-child(1):hover{
+
+            transform: skew(45deg ,0 );
         }
 
 
         div:nth-child(2){
               background-color: orangered;
               margin-top: 250px;
-              transform: skew(0 , 45deg );
+                transition-duration: 3s;
           }
+
+        div:nth-child(2):hover{
+
+            transform: skew(0 , 45deg );
+        }
+
+
+        div:nth-child(3){
+            background-color: orangered;
+            margin-top: 250px;
+            transition-duration: 3s;
+        }
+
+        div:nth-child(3):hover{
+
+            transform: skew(30deg , 30deg );
+        }
     </style>
 </head>
 <body>
 
 <div>
-    skew（-45deg）
+    hover --transform: skew(45deg ,0 );
 </div>
 
 <div>
-    skew(-45deg , -30deg)
+    hover -- transform: skew(0 , 45deg );
 </div>
-
+<div>
+    hover -- transform: skew(30deg , 30deg );
+</div>
 </body>
 </html>

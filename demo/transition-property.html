@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transition-property</title>
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <style>
+        a[href^='#box']{
+            display: inline-block;
+            text-align: center;
+            width: 50px ;
+            height: 30px;
+            line-height: 30px;
+            background-image: linear-gradient(to top ,#333 , #555);
+            color: white;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        div[id^='box']{
+            visibility: hidden;
+            background:none;
+            overflow: hidden;
+            transition-property: all;
+            transition-duration:0.5s ;
+            width: 600px;
+            height: 300px;
+        }
+        a:hover + #box1{
+            visibility: visible;
+            background-color: seagreen !important;
+            background-image: none;
+            /*background: red;*/
+        }
+
+
+        #imgBox{
+            height: 200px;
+            width: 200px;
+            border: 2px solid darksalmon;
+            background-image: url("../imgs/1.jpg");
+            background-size: 200px 200px;
+            transition: all 0.5s ease-in ;
+            background-origin: center center;
+        }
+        #imgBox:hover{
+            background-size: 250px 250px;
+        }
+
+    </style>
+</head>
+<body>
+<a href="#box1">box1</a>
+<a href="#box2">box2</a>
+<div id="box1">
+    这是box1盒子
+    这是box1盒子
+    这是box1盒子
+    这是box1盒子
+</div>
+<div id="box2">
+    这是box2盒子
+    这是box2盒子
+    这是box2盒子
+    这是box2盒子
+</div>
+
+
+<div id='imgBox'>
+    <!--<img src="../imgs/1.jpg" alt="">-->
+</div>
+
+<script>
+    
+    
+//    $(function () {
+//        $('#imgBox').on( 'mouseover' , function (e) {
+//            $(this).find('img').addClass('bigerImg')
+//        })
+//    })
+</script>
+</body>
+</html>

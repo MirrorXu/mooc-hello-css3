@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform-origin</title>
+    <style>
+        .box{
+            width:200px;
+            height: 200px;
+            border: 5px dashed red;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .box:not(:first-child){
+            margin-top: 50px;
+        }
+        .box > div{
+            background-color: rebeccapurple;
+            color: white;
+            width: 100%;
+            height: 100%;
+            transition-duration:0.5s;
+        }
+        .box:nth-child(1) > div{
+            transform-origin: bottom left;
+            background-color: #3c8c46;
+        }
+        .box:nth-child(1) > div:hover{
+            transform: rotate(90deg);
+
+        }
+        .box:nth-child(2) > div{
+            transform-origin: right top;
+            background-color: skyblue;
+        }
+        .box:nth-child(2) > div:hover{
+            transform:scale(1.5);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <div>
+
+        transform-origin: bottom left;
+        <br>
+        transform: rotate(90deg);
+    </div>
+</div>
+
+<div class="box">
+    <div>
+
+        transform-origin: right top;
+        <br>
+        transform:scale(1.5);
+    </div>
+</div>
+
+</body>
+</html>
