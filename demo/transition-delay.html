@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transition-delay</title>
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+            position:relative;
+        }
+        div{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            height: 200px;
+            width: 200px;
+            background: seagreen;
+            transition: background 1s ease-in-out , width 0.5s linear , height 0.5s linear 0.5s;
+        }
+        div:hover{
+            background: yellowgreen;
+            width: 400px;
+            height: 400px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div>
+    transition: background 1s ease-in-out , width 0.5s linear , height 0.5s linear 0.5s;
+</div>
+
+</body>
+</html>

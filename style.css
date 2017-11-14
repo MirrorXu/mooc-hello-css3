@@ -1,5 +1,6 @@
 * {
-  box-sizing: border-box !important;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
 }
 html,
 body {
@@ -10,16 +11,18 @@ body {
   padding: 0;
 }
 #header {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#3c8c46), to(#5aa069));
   background-image: linear-gradient(to top, #3c8c46, #5aa069);
 }
 #left {
+  background-image: -webkit-gradient(linear, left top, right top, from(#b4ebb4), color-stop(99%, #dcf5dc), to(#e6ffe6));
   background-image: linear-gradient(to right, #b4ebb4, #dcf5dc 99%, #e6ffe6 100%);
 }
 #left #navbar {
   display: inline-block;
   width: 100%;
   list-style: none;
-  padding: 0;
+  padding: 0 0 50px 0;
 }
 #left #navbar > li {
   width: 100%;

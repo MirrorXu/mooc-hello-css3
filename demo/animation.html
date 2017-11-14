@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animation</title>
+    <style>
+        h2{
+            font-size: 50px;
+            font-weight: bolder;
+            color: red;
+        }
+
+        #box1{
+            width: 300px;
+            height: 2px;
+            border: 1px solid black;
+            position: relative;
+        }
+        #box1 > span{
+            position: absolute;
+            left: 0;
+            top: -30px;
+            display: block;
+            height: 30px;
+            width: 30px;
+            background: greenyellow;
+            border-radius: 50%;
+            animation-play-state: running; /* runing */
+            animation-name: animation1;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-duration:5s;
+
+        }
+        @keyframes animation1 {
+            0%{
+                top: -30px;
+                left: -50px;
+            }
+            49%{
+                top: -30px;
+                left: 300px;
+            }
+            50%{
+                top: 0;
+                left: 300px;
+            }
+            51%{
+                top: 1px;
+                left: 300px;
+            }
+            98%{
+                top: 1px;
+                left: -50px;
+            }
+            100%{
+                top: -30px;
+                left: -50px;
+            }
+        }
+
+        @keyframes animation2 {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+
+        #box2{
+            box-sizing: border-box;
+            border: 1px solid black;
+            height: 100px;
+            width: 100px;
+            background-color:wheat;
+            position: relative;
+            border-radius: 100%;
+            animation-play-state: running;
+            animation-iteration-count: infinite;
+            animation-name: animation2;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+
+        }
+        #box2 > span{
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-left: -5px;
+            background: rebeccapurple;
+            position: absolute;
+            top: 0;
+            left:50% ;
+        }
+    </style>
+</head>
+<body>
+<h2>demo1:</h2>
+<div id="box1">
+    <span></span>
+</div>
+
+<h2>demo2:</h2>
+<div id="box2">
+    <span></span>
+</div>
+
+</body>
+</html>

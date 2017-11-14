@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transition-timing-function</title>
+    <style>
+        body{
+            position: relative;
+        }
+        div{
+            display: block;
+            width: 600px;
+            height: 50px ;
+            background-color: red;
+            color: white;
+            font-size: 30px;
+            line-height: 30px;
+            font-weight: bolder;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 50px;
+            border: 3px solid green;
+            transition-property:all;
+            transition-duration: 1s ;
+        }
+        div:hover{
+            height: 200px;
+        }
+
+        div:nth-child(1){
+            background: deeppink;
+            transition-timing-function:ease;
+        }
+
+        div:nth-child(2){
+            background: darkgoldenrod;
+            transition-timing-function: ease-in;
+        }
+        div:nth-child(3){
+            background: seagreen;
+            transition-timing-function:ease-out;
+        }
+
+
+        div:nth-child(4){
+            background: darkblue;
+            transition-timing-function:ease-in-out;
+        }
+
+
+        div:nth-child(5){
+            background: cadetblue;
+            transition-timing-function:linear;
+        }
+
+        .box{
+            text-align: center  ;
+            width: 300px!important;
+            height: 300px!important;
+            line-height: 300px;
+            font-size: 30px;
+            background: lightcoral;
+            border-radius: 50%;
+            transition-timing-function: ease-in-out;
+            transition-duration: 0.5s;
+            transition-delay: 0.5s;
+            transition-property: all;
+            border: none;
+            transform-origin: center;
+        }
+        .box:hover{
+            border-radius: 0;
+            background-color: skyblue;
+        }
+
+    </style>
+</head>
+<body>
+
+<div>transition-timing-function: ease</div>
+<div>transition-timing-function: ease-in</div>
+<div>transition-timing-function: ease-out</div>
+<div>transition-timing-function: ease-in-out</div>
+<div>transition-timing-function: linear</div>
+
+<div class="box">
+    hover变化
+</div>
+
+</body>
+</html>

@@ -18,7 +18,7 @@
             font-weight: bolder;
         }
         div[id^='box']{
-            visibility: hidden;
+            display: none;
             background:none;
             overflow: hidden;
             transition-property: all;
@@ -26,12 +26,14 @@
             width: 600px;
             height: 300px;
         }
-        a:hover + #box1{
-            visibility: visible;
-            background-color: seagreen !important;
-            background-image: none;
-            /*background: red;*/
+
+        #link > a:nth-child(1){
+            background: rebeccapurple;
         }
+        #link > a:nth-child(2){
+            background: red;
+        }
+
 
 
         #imgBox{
@@ -40,18 +42,47 @@
             border: 2px solid darksalmon;
             background-image: url("../imgs/1.jpg");
             background-size: 200px 200px;
-            transition: all 0.5s ease-in ;
-            background-origin: center center;
+            transition: all 0.3s ease-in ;
+            background-position: center center;
+            overflow: hidden;
         }
         #imgBox:hover{
-            background-size: 250px 250px;
+            background-size: 210px 210px;
         }
+
+
+        #imgBox2{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            border: 2px solid #000000;
+            z-index: 5;
+        }
+        #imgBox2 > img{
+            border: 0;
+            padding: 0;
+            margin: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 0;
+            transition: all 0.3s ease-in;
+        }
+        #imgBox2 > img:hover{
+            transform: scale(1.1);
+        }
+
+
+
 
     </style>
 </head>
 <body>
-<a href="#box1">box1</a>
-<a href="#box2">box2</a>
+<div id="link">
+    <a href="#box1">box1</a>
+    <a href="#box2">box2</a>
+</div>
 <div id="box1">
     这是box1盒子
     这是box1盒子
@@ -70,14 +101,12 @@
     <!--<img src="../imgs/1.jpg" alt="">-->
 </div>
 
+<div id="imgBox2">
+    <img src="../imgs/1.jpg" alt="">
+</div>
+
 <script>
-    
-    
-//    $(function () {
-//        $('#imgBox').on( 'mouseover' , function (e) {
-//            $(this).find('img').addClass('bigerImg')
-//        })
-//    })
+
 </script>
 </body>
 </html>
